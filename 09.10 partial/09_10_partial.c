@@ -58,12 +58,13 @@ int main(){
 
     struct node * head1 =NULL,*head2=NULL;
     append(&head1,'a');
-    // append(&head1,'b');
+    append(&head1,'b');
+    append(&head1,'e');
     append(&head2,'c');
     struct node * newList = concat(head1,head2);
-    while(head1){
-        printf("%c ",head1->data);
-        head1 = head1->next;
+    while(newList){
+        printf("%c ",newList->data);
+        newList = newList->next;
     }
     return 0;
 }
